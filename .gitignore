@@ -1,0 +1,31 @@
+# Node
+node_modules/
+
+# Logs
+logs
+*.log
+
+# dotenv
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Build / dist
+dist/
+build/
+
+# Vite / client
+/client/vite-project/node_modules/
+/client/vite-project/dist/
+
+# Server node_modules
+/server/node_modules/
+
+# Optional: ignore local npm debug files
+npm-debug.log*
