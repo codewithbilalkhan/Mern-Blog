@@ -1,12 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react'
-import NavBar from './components/NavBar.jsx'
-import HeroSection from './components/HeroSection.jsx'
+import Home from './pages/home.jsx'
+import About from './pages/about.jsx'
 const App = () => {
   return (
-   <>
-   <NavBar/>
-   <HeroSection/>
-   </>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+
+
+  </BrowserRouter>
   )
 }
 
