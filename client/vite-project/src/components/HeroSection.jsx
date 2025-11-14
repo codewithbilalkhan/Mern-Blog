@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 text-white overflow-hidden">
+    <section className="relative bg-linear-to-r from-indigo-600 via-purple-600 to-pink-500 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           <h1 className="col-span-full text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 text-center">Welcome To MyBlog</h1>
