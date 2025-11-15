@@ -1,16 +1,21 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
 import LeftSideContent from '../components/LeftSideContent'
+import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-import { Sparkles } from 'lucide-react'
+import { Shield } from 'lucide-react'
 
+const signin = () => {
+   const statsData = [
+    { statistic: '10K+', label: 'Writers' },
+    { statistic: '50K+', label: 'Articles' },
+    { statistic: '100K+', label: 'Readers' },
+  ];
 
-
-const signup = () => {
   return (
-   <>
-   <NavBar/>
+    <>
+    <NavBar/>
 
+    
    <div className="
       min-h-screen bg-gray-100 flex flex-col items-center justify-center
       py-12 px-4 sm:px-6 lg:px-8
@@ -28,19 +33,20 @@ const signup = () => {
           flex items-center justify-center p-8 lg:p-0
         ">
           <LeftSideContent 
-          title="Join Our Community"
-          icon = {<Sparkles/>}
+          title="Welcome Back"
+          icon = {<Shield/>}
           headingSecondary="Telling Your Stories"
-          paragraph="Join thousands of writers sharing their stories and inspiring others every day"
+          paragraph="Sign in to continue your blogging journey and connect with your audience"
+          ticks = {false}
+          stats={statsData}
           />
         </div>
-
       </div>
     </div>
     <Footer/>
-
-   </>
+    
+    </>
   )
 }
 
-export default signup
+export default signin
