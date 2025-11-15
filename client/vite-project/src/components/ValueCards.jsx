@@ -2,7 +2,7 @@ import React from "react";
 
 const ValueCards = ({ IconComponent, title, paragraph, index }) => {
   return (
-    <div className="relative bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:ring-2 hover:ring-blue-500 w-full min-h-[220px]">
+    <div className="relative bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100 duration-300 hover:shadow-xl hover:ring-2 transform hover:-translate-y-2.5 transition hover:ring-blue-500 w-full min-h-[220px]">
       <div
         className="absolute top-[-15px] left-[-15px] sm:-top-5 sm:-left-5 
                     flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 
