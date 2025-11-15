@@ -5,9 +5,10 @@ const ContactInfoCard = ({icon, title, content}) => {
    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 mb-6">
       <div className="flex items-start">
     
-        <div className="shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+        <div className="shrink-0 w-10 h-10 bg-blue-600 rounded-lg 
+  flex items-center justify-center mr-4">
         
-          <span className="text-white w-5 h-5">{icon}</span>
+          <span className="text-white w-5 h-5 flex items-center justify-center">{icon}</span>
         </div>
         
        

@@ -5,13 +5,13 @@ const ContactForm = () => {
     const inputStyle = "w-full p-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200";
   return (
     <div className="bg-white p-8 md:p-10 rounded-lg shadow-md border border-gray-100 h-full">
-      <h2 className="text-2xl font-bold text-gray-800 mb-8">Send Us a Message</h2>
+      <h2 className="text-4xl font-bold text-gray-800 mb-8">Send Us a Message</h2>
 
       <form className="space-y-6">
       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+            <label htmlFor="name" className="block text-md font-medium text-gray-700 mb-1">Your Name</label>
             <input 
               type="text" 
               id="name" 
@@ -20,7 +20,7 @@ const ContactForm = () => {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+            <label htmlFor="email" className="block text-md font-medium text-gray-700 mb-1">Your Email</label>
             <input 
               type="email" 
               id="email" 
@@ -32,7 +32,7 @@ const ContactForm = () => {
 
        
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+          <label htmlFor="subject" className="block text-md font-medium text-gray-700 mb-1">Subject</label>
           <input 
             type="text" 
             id="subject" 
@@ -43,7 +43,7 @@ const ContactForm = () => {
 
        
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <label htmlFor="message" className="block text-md font-medium text-gray-700 mb-1">Message</label>
           <textarea
             id="message"
             rows="6"

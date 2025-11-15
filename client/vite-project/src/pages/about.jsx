@@ -47,7 +47,7 @@ const about = () => {
    {
     id: 3,
     IconComponent: Award,
-    title: "Authenticity",
+    title: "Quality",
     paragraph: "Providing powerful tools and features that help writers create their best work.",
   },
 
