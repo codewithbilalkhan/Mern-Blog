@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import LeftSideContent from '../components/LeftSideContent'
 import Footer from '../components/Footer'
+import Form from '../components/Form'
 import { Sparkles } from 'lucide-react'
 
 
@@ -32,6 +33,21 @@ const signup = () => {
           icon = {<Sparkles/>}
           headingSecondary="Telling Your Stories"
           paragraph="Join thousands of writers sharing their stories and inspiring others every day"
+          />
+        </div>
+        <div className="
+          flex items-center justify-center p-8 lg:p-12 xl:p-16
+          bg-white
+        ">
+          <Form  
+          button ="Create Account"
+          signupline="Already have an account?"
+          choose="Sign In"
+          loginRoute="/signin"
+          maintitle="Create Your Account"
+          subtitle="Start your blogging journey today"
+    
+          
           />
         </div>
 

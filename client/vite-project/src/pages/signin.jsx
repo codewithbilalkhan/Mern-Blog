@@ -1,6 +1,7 @@
 import React from 'react'
 import LeftSideContent from '../components/LeftSideContent'
 import NavBar from '../components/NavBar'
+import Form from '../components/Form'
 import Footer from '../components/Footer'
 import { Shield } from 'lucide-react'
 
@@ -39,6 +40,23 @@ const signin = () => {
           paragraph="Sign in to continue your blogging journey and connect with your audience"
           ticks = {false}
           stats={statsData}
+          />
+        </div>
+          <div className="
+          flex items-center justify-center p-8 lg:p-12 xl:p-16
+          bg-white
+        ">
+          <Form
+          button = "Sign In"
+          signupline="Don't have an account?"
+          choose="Sign Up"
+          loginRoute="/signup"
+          fullname={false}
+          username={false}
+          maintitle="Sign In to Your Account"
+          subtitle="Welcome back! Please enter your details to sign in."
+          
+          
           />
         </div>
       </div>
