@@ -1,19 +1,19 @@
 const express = require("express");
 const cors = require('cors');
-
-
-
-
 const connectDB = require("./database");
+const authRoutes  = require("./routes/authRoutes");
+
 connectDB();
 
-
+require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use('/api/auth', authRoutes);
+
 app.get('/', (req, res)=>{
-    res.send('Hello World');
+    res.send('Hello Blog');
 
 })
 

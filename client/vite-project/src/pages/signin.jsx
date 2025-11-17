@@ -3,9 +3,55 @@ import LeftSideContent from '../components/LeftSideContent'
 import NavBar from '../components/NavBar'
 import Form from '../components/Form'
 import Footer from '../components/Footer'
+import { useLocation } from 'react-router-dom'
+import {useState, useEffect} from 'react'
 import { Shield } from 'lucide-react'
 
 const signin = () => {
+
+  const location = useLocation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+   useEffect(() => {
+    if (location.state) {
+      setEmail(location.state.email || '');
+      setPassword(location.state.password || '');
+    }
+  }, [location.state]);
+
+
+
+    const handleLogin = async (data) => {
+  try {
+    const res = await fetch("http://localhost:8000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.email,
+        password: data.password
+      }),
+    });
+
+    const result = await res.json();
+
+    if (!res.ok) {
+      alert(result.message);
+      return;
+    }
+
+    // Save token to localStorage
+    localStorage.setItem("token", result.token);
+
+    alert("Login successful!");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
    const statsData = [
     { statistic: '10K+', label: 'Writers' },
     { statistic: '50K+', label: 'Articles' },
@@ -51,11 +97,13 @@ const signin = () => {
           signupline="Don't have an account?"
           choose="Sign Up"
           loginRoute="/signup"
-          fullname={false}
-          username={false}
+          fullsname={false}
+          usersname={false}
           maintitle="Sign In to Your Account"
           subtitle="Welcome back! Please enter your details to sign in."
-          
+          onSubmit={handleLogin}
+          initialEmail={email}
+          initialPassword={password}
           
           />
         </div>

@@ -4,10 +4,41 @@ import LeftSideContent from '../components/LeftSideContent'
 import Footer from '../components/Footer'
 import Form from '../components/Form'
 import { Sparkles } from 'lucide-react'
+import {useNavigate } from 'react-router-dom'
 
 
 
 const signup = () => {
+
+    const naviagate = useNavigate();
+
+    const handleSignup = async (data)=>{
+    try{
+        const res = await fetch('http://localhost:8000/api/auth/register',{
+            method: 'POST',
+            headers: {
+                 "Content-Type": "application/json",
+            },
+        body: JSON.stringify({
+        fullname: data.fullname,
+        username: data.username,
+        email: data.email,
+        password: data.password
+      }),
+     });
+
+        const result = await res.json();
+        if(!res.ok){
+            alert(result.message);
+            return;
+        }
+        alert("Account created successfully!");
+        naviagate('/signin', {state: {email: data.email, password: data.password}});
+        } catch (error) {
+            console.log(error);
+        }
+        };
+                    
   return (
    <>
    <NavBar/>
@@ -46,6 +77,7 @@ const signup = () => {
           loginRoute="/signin"
           maintitle="Create Your Account"
           subtitle="Start your blogging journey today"
+          onSubmit={handleSignup}
     
           
           />
